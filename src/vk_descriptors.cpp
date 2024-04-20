@@ -221,7 +221,7 @@ void DescriptorWriter::clear() {
 }
 
 void DescriptorWriter::update_set(VkDevice device, VkDescriptorSet set) {
-	for (VkWriteDescriptorSet write : writes) {
+	for (VkWriteDescriptorSet& write : writes) {
 		write.dstSet = set;
 	}
 
